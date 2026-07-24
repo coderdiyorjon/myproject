@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect
-from .models import Feature
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Feature, Post
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 
@@ -78,3 +78,33 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')
+
+
+# Handle the post view
+def posts(request):
+    if request.method == 'GET':
+        if request.user.is_authenticated:
+
+            # Retrieve all posts by the logged-in user
+            posts = request.user.blog_posts.all()
+            return render(request, 'posts.html', {'posts': posts})
+        else:
+            messages.info(request, 'You need to be logged in to view your posts')
+            return redirect('login')
+    else:
+        return redirect('/')
+
+def post(request, slug):
+    if request.method == 'GET':
+        if request.user.is_authenticated:
+            post = get_object_or_404(request.user.blog_posts, slug=slug)
+            if post:
+                return render(request, 'post.html', {'post': post})
+            else:
+                messages.info(request, 'Post not found')
+                return redirect('posts')
+        else:
+            messages.info(request, 'You need to be logged in to view this post')
+            return redirect('login')
+    else:
+        return redirect('posts')
