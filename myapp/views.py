@@ -5,6 +5,8 @@ from django.contrib import messages
 
 # Create your views here.
 
+
+# Handle the index page view
 def index(request):
 
     # Retrieve all features from the database
@@ -12,9 +14,9 @@ def index(request):
     return render(request, 'index.html', {'features': features})
 
 
+# Handle the registration form submission
 def register(request):
 
-    # Handle the registration form submission
     # Check if the request method is POST
     if request.method == 'POST':
         data = request.POST
@@ -27,6 +29,7 @@ def register(request):
 
         # Check if the passwords match
         if password == password_repeat:
+
             # Check if the username/email already exists
             if User.objects.filter(email=email).exists():
                 messages.info(request, 'Email already exists')
@@ -35,6 +38,7 @@ def register(request):
                 messages.info(request, 'Username already exists')
                 return redirect('register')
             else:
+
                 # Create a new user
                 user = User.objects.create_user(username=username, email=email, password=password)
                 user.save()
@@ -44,3 +48,33 @@ def register(request):
             return redirect('register')
     else:
         return render(request, 'register.html')
+
+
+# Handle the login form submission
+def login(request):
+
+    # Check if the request method is POST
+    if request.method == 'POST':
+        # Extract the form data
+        data = request.POST
+        username = data['username']
+        password = data['password']
+
+        # Authenticate the User
+        user = auth.authenticate(username=username, password=password)
+
+        # Check if the user is authenticated
+        if user is not None:
+            auth.login(request, user)
+            return redirect('/')
+        else:
+            messages.info(request, 'Invalid credentials')
+            return redirect('login')
+    else:
+        return render(request, 'login.html')
+
+
+# Handle the logout action
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
