@@ -1,0 +1,127 @@
+    body {
+      font-family: "Open Sans", sans-serif;
+      color: #444444;
+      background-color: #f8fbfe;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Raleway", sans-serif;
+      color: #124265;
+    }
+
+    /* Header / Navbar */
+    
+    .header {
+      transition: all 0.5s;
+      z-index: 997;
+      padding: 15px 0;
+      background: #fff;
+      box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
+    }
+
+    .header .logo {
+      font-size: 28px;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #124265;
+      text-decoration: none;
+    }
+
+    .nav-link {
+      color: #124265;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 15px !important;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: #2487ce;
+    }
+
+    .btn-get-started {
+      font-family: "Raleway", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      display: inline-block;
+      padding: 8px 25px;
+      border-radius: 4px;
+      transition: 0.3s;
+      color: #fff;
+      background: #2487ce;
+      border: none;
+      text-decoration: none;
+    }
+
+    .btn-get-started:hover {
+      background: #1d6fa5;
+      color: #fff;
+    }
+
+    /* Register Section */
+    .register-section {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 0;
+      background: linear-gradient(135deg, rgba(248, 251, 254, 0.9) 0%, rgba(225, 238, 248, 0.6) 100%);
+    }
+
+    .register-card {
+      background: #ffffff;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0px 0 30px rgba(18, 66, 101, 0.08);
+      padding: 40px;
+    }
+
+    .form-label {
+      font-weight: 600;
+      color: #124265;
+      font-size: 14px;
+    }
+
+    .form-control {
+      border-radius: 4px;
+      border: 1px solid #dce5ec;
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+
+    .form-control:focus {
+      border-color: #2487ce;
+      box-shadow: 0 0 0 0.2rem rgba(36, 135, 206, 0.25);
+    }
+
+    .btn-primary-custom {
+      background: #2487ce;
+      border: none;
+      padding: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    .btn-primary-custom:hover {
+      background: #1a6ca7;
+    }
+
+    .login-link {
+      color: #2487ce;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .login-link:hover {
+      text-decoration: underline;
+    }
+  
