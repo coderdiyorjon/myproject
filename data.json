@@ -1,0 +1,200 @@
+[
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$aUQwtFaDEHgdexP1RHB1JY$Hd5afEIhRY/bmLvlymVfpYewHt/9NBorXXf9faFxrdk=",
+        "last_login": "2026-07-24T13:08:52.225Z",
+        "is_superuser": true,
+        "username": "coder",
+        "first_name": "",
+        "last_name": "",
+        "email": "coder@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-07-23T07:05:23.911Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$Fh3378qlSGiXhfAcFE6iRr$LhsdakhWoDbxLrQ1wnkxicBOlaBGwb0SA07s3SBApcI=",
+        "last_login": "2026-07-24T14:03:10.070Z",
+        "is_superuser": false,
+        "username": "coder1",
+        "first_name": "",
+        "last_name": "",
+        "email": "coder1@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-07-24T06:32:39.552Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "awqqexfmfpsf3r6kc6li683068vsnln6",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFLl1Lw6L3fQBZYpGpoUtqT8d9tkx70NMm8N_MWnra1-K3x4qckrkKJy28XKD65HiA9qN5nGee6LlOQhyJP2uQ4J37dTvfvoFAr-9oQokKHHe7ZwQCoolOGlQFNPQaOLmmANLiUOVginUNv0SmbjSaw4vMFoz020A:1wn9mD:mCkMt23kxhxwdPssXUdHxYU4bnwugc9M7qMw8vxkzjE",
+        "expire_date": "2026-08-07T06:52:57.174Z"
+    }
+},
+{
+    "model": "myapp.feature",
+    "pk": 1,
+    "fields": {
+        "name": "Quick",
+        "details": "Our service is as quick as light"
+    }
+},
+{
+    "model": "myapp.feature",
+    "pk": 2,
+    "fields": {
+        "name": "Reliable",
+        "details": "Our Product is Reliable"
+    }
+},
+{
+    "model": "myapp.feature",
+    "pk": 3,
+    "fields": {
+        "name": "Affordable",
+        "details": "Our Product is Affordable"
+    }
+},
+{
+    "model": "myapp.feature",
+    "pk": 4,
+    "fields": {
+        "name": "Cheap",
+        "details": "Our Service is Cheaper than anu other in the world"
+    }
+},
+{
+    "model": "myapp.post",
+    "pk": 1,
+    "fields": {
+        "title": "AI",
+        "slug": "ai",
+        "body": "AI CAME FROM NOWHERE",
+        "author": [
+            "coder1"
+        ],
+        "is_published": false,
+        "created_at": "2026-07-24T13:18:34.284Z",
+        "updated_at": "2026-07-24T13:18:34.284Z",
+        "status": "draft"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2026-07-24T04:38:23.269Z",
+        "user": [
+            "coder"
+        ],
+        "content_type": [
+            "myapp",
+            "feature"
+        ],
+        "object_id": "1",
+        "object_repr": "Feature object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2026-07-24T04:40:39.171Z",
+        "user": [
+            "coder"
+        ],
+        "content_type": [
+            "myapp",
+            "feature"
+        ],
+        "object_id": "2",
+        "object_repr": "Feature object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2026-07-24T06:32:20.387Z",
+        "user": [
+            "coder"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "coder1",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2026-07-24T06:56:41.038Z",
+        "user": [
+            "coder"
+        ],
+        "content_type": [
+            "myapp",
+            "feature"
+        ],
+        "object_id": "3",
+        "object_repr": "Feature object (3)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2026-07-24T06:57:11.416Z",
+        "user": [
+            "coder"
+        ],
+        "content_type": [
+            "myapp",
+            "feature"
+        ],
+        "object_id": "4",
+        "object_repr": "Feature object (4)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2026-07-24T13:18:34.286Z",
+        "user": [
+            "coder"
+        ],
+        "content_type": [
+            "myapp",
+            "post"
+        ],
+        "object_id": "1",
+        "object_repr": "Post object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}
+]
